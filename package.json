@@ -1,0 +1,46 @@
+{
+  "name": "environment-tools",
+  "displayName": "Python Environment Tools",
+  "publisher": "chaiushas",
+  "description": "Extension for creating, activating and removing virtual environment.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+      "command": "environment-tools.activate",
+      "title": "PYENV: Activate Virtual Environment"
+    },
+    {
+      "command": "environment-tools.create",
+      "title": "PYENV: Create Virtual Environment"
+    },
+    {
+      "command": "environment-tools.remove",
+      "title": "PYENV: Remove Virtual Environment"
+    }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
